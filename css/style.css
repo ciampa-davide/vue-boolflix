@@ -1,0 +1,77 @@
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  background: lightgrey;
+}
+
+.header{
+  display: flex;
+  height:100px;
+  width: 100%;
+  background: rgba(0, 0, 0, 1);
+}
+.left{
+  width: 50%;
+}
+
+.left h1{
+  color: red;;
+  padding: 30px;
+}
+
+.right {
+  width: calc(100% - 50%);
+  display: flex;
+  justify-content: flex-end;
+}
+.right input, i{
+  align-self: center;
+  margin:10px;
+
+}
+.right i {
+  color : white;
+}
+
+.center {
+  width: 100%;
+  height:100%;
+}
+
+.card{
+  width: 200px;
+  height: 300px;
+  border:1px solid red;;
+  margin: 20px;
+  background: black;
+}
+
+.card img{
+  width: 100%;
+  height: 100%;
+}
+.card_hover{
+  display:none
+}
+
+.card img:hover{
+  display:none
+}
+
+.card:hover p{
+  margin: 10px;
+  display: block;
+  color:white;
+}
+
+.card span{
+  font-weight: bold;
+}
+
+.card i{
+  color: yellow;
+}
