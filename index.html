@@ -17,18 +17,26 @@
           </div>
           <div class="right">
             <input type="text" v-model="searchString">
-            <i class="fas fa-search" @click="searchMovie"></i>
+            <i class="fas fa-search" @click="search" ></i>
           </div>
         </div>
         <div class="center">
           <div class="card" v-for="film in films">
 
-            <img src="img/locandina.jpg" alt="">
-            <p class="card_hover"><span>Titolo</span>: {{film.title}}</p>
-            <p class="card_hover"><span>Titolo Originale</span>: {{film.title}}</p>
-            <p class="card_hover"><span>Voto:</span></p>
-            <p class="card_hover font "><span>Overview</span>: {{film.overview}}</p>
-          </div>
+            <img :src="poster + film.poster_path" alt="">
+            <p class="card_hover font"><span>Titolo:</span> {{film.title}}</p>
+            <p class="card_hover font"><span>Titolo Originale:</span> {{film.title}}</p>
+            <p class="card_hover stars"><span>Voto:</span>
+              <i class="fas fa-star" v-for="n in getVote(film)"></i>
+              <i class="far fa-star" v-for="n in (5 - getVote(film))"></i>
+            </p>
+            <div class="overview">
+            <p class="card_hover font "><span>Overview:</span> {{film.overview}}</p>
+            <!-- <div class="lenguage">
+              <p class="card_hover img"><span>Lingua:</span></p>
+              <img :src="getFlag(film)">
+            </div> -->
+            </div>
         </div>
       </div>
 

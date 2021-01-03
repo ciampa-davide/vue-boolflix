@@ -45,8 +45,8 @@ body{
 }
 
 .card{
-  width: 200px;
-  height: 300px;
+  width: 250px;
+  height: 350px;
   border:2px solid white;
   margin: 20px;
   background: black;
@@ -61,7 +61,6 @@ body{
 }
 .font{
   font-size: 12px;
-  height: 100%;
 }
 
 .card:hover img{
@@ -74,10 +73,25 @@ body{
   color:white;
 }
 
+.lenguage{
+  display: flex;
+  width: 25px;
+  height:25px;
+}
+
+
 .card span{
   font-weight: bold;
+  font-size: 16px;
 }
 
 .card i{
   color: yellow;
+  font-size: 16px;
+  margin-left: 0;
+}
+
+.overview{
+  max-height: 200px;
+  overflow-y: auto;
 }
